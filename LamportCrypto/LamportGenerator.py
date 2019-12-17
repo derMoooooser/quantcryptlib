@@ -29,7 +29,7 @@ class LamportGenerator:
     def hashSequence(self, sequence):
         sequenceOfHashes = []
         for number in sequence:
-            sequenceOfHashes.append(self.hashFunction.getHexHash(number[0]),self.hashFunction.getHexHash(number[1]))
+            sequenceOfHashes.append((self.hashFunction.getHexHash(number[0]),self.hashFunction.getHexHash(number[1])))
         return sequenceOfHashes
             
     def createSignatureForMessage(self, message, keyPair):
